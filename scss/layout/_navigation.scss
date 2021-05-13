@@ -1,0 +1,98 @@
+.main-nav {
+  display: none;
+  &__items{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  &__item{
+    margin: 0 1rem;
+    & a{
+      text-decoration: none;
+      color: $primary-color;
+      font-weight: bold;
+      padding: 0.2rem 0;
+      &:hover{
+        color: white;
+        border-bottom: 5px solid white;
+      }
+    }
+    &--cta{
+      animation: wiggle 400ms 3s 8 ease-out none;
+      & a{
+        color: white;
+        background: $secondary-color;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        &:hover,
+        &:active{
+          color: $secondary-color;
+          background: white;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.mobile-nav {
+  transform: translateX(-100%);
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 80%;
+  height: 100vh;
+  transition: transform 300ms ease-out;
+  &__items{
+    width: 90%;
+    height: 100%;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item{
+    margin: 1rem 0;
+    & a{
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: $primary-color;
+      font-weight: bold;
+      padding: 0.2rem 0;
+      &:hover,
+      &:active{
+        color: white;
+        border-bottom: 5px solid white;
+      }
+    }
+    &--cta a{
+      color: white;
+      background: $secondary-color;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      &:hover,
+      &:active{
+        color: $secondary-color;
+        background: white;
+        border: none;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+@media (min-width: 40rem) {
+  .main-nav {
+    display: flex;
+  }
+}

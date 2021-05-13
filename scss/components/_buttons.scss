@@ -1,0 +1,55 @@
+
+
+.toggle-button {
+  width: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+  &:focus{
+    outline: none;
+  }
+  &__bar{
+    width: 100%;
+    height: 0.2rem;
+    background: black;
+    display: block;
+    margin: 0.6rem 0;
+  }
+}
+
+.button {
+  background: $primary-color;
+  color: white;
+  font: inherit;
+  border: 1.5px solid $primary-color;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover,
+  &:active{
+    background: white;
+    color: $primary-color;
+  }
+  &:focus{
+    outline: none;
+  }
+  &[disabled]{
+    cursor: not-allowed;
+    border: #a1a1a1;
+    background: #ccc;
+    color: #a1a1a1;
+  }
+}
+
+
+
+
+@media (min-width: 40rem) {
+  .toggle-button {
+    display: none;
+  }
+}

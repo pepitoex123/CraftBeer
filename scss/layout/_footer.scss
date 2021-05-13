@@ -1,0 +1,38 @@
+.main-footer {
+  background-image: radial-gradient(circle at 50% 18.68%, #cde58e 0, #c0e895 5%, #b3ea9c 10%, #a6eca5 15%, #98eeaf 20%, #8aefb9 25%, #7bf1c4 30%, #6cf1cf 35%, #5cf2db 40%, #4cf2e7 45%, #3cf2f2 50%, #2ef2fd 55%, #25f1ff 60%, #28efff 65%, #35eeff 70%, #46ecff 75%, #5aeaff 80%, #6ee7ff 85%, #82e4ff 90%, #95e1ff 95%, #a8ddff 100%);
+  opacity:0.7;
+  padding: 2rem;
+  margin-top: 3rem;
+  /* grid-row: 3 / 4; */
+  grid-area: footer;
+  &__links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__link{
+    margin: 0.5rem 0;
+    & a{
+      color: black;
+      text-decoration: none;
+      &:hover,
+      &:active{
+        color: #e24c00;
+      }
+    }
+  }
+}
+
+@media (min-width: 40rem) {
+  .main-footer__link {
+    margin: 0 1rem;
+  }
+
+  .main-footer__links {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

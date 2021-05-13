@@ -1,0 +1,28 @@
+.main-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: radial-gradient(circle at 94.79% 94.79%, #ff6e46 0, #fe5942 25%, #f23c3c 50%, #e50d37 75%, #db0036 100%);
+  opacity: 0.9;
+  padding: 0.5rem 1rem;
+  z-index: 60;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__brand{
+    text-decoration: none;
+    font-weight: bold;
+    & img{
+      height: 2.5rem;
+      vertical-align: middle;
+      transition: all 0.3s;
+      &:hover{
+        height: 2.7rem;
+      }
+    }
+  }
+}
